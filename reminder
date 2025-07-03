@@ -54,6 +54,7 @@ local function ABKER_fake_script() -- TextButton.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Oproxide/civilization-survival/refs/heads/main/v1"))()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 end
 coroutine.wrap(ABKER_fake_script)()
