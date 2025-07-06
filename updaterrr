@@ -1,4 +1,4 @@
-local update = false
+local update = true
 if update == true then
   
 local ScreenGui = Instance.new("ScreenGui")
