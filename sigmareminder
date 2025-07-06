@@ -1,0 +1,62 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+plsdont = false
+-- Instances
+
+local sssss = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+
+-- Properties
+
+sssss.Name = "sssss"
+sssss.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+sssss.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = sssss
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.133474708, 0, 0.147774592, 0)
+TextLabel.Size = UDim2.new(0.695338905, 0, 0.329485506, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "YOU GOTTA BE LOADED IN TO RUN THIS"
+TextLabel.TextColor3 = Color3.new(1, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextButton.Parent = TextLabel
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.27446717, 0, 0.999642253, 0)
+TextButton.Size = UDim2.new(0.504103303, 0, 0.374130815, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Ready(run)"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+-- Scripts
+
+local function ABKER_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+   if plsdont == true then return end
+     plsdont = true
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Oproxide/civilization-survival/refs/heads/main/V1.1"))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(ABKER_fake_script)()
