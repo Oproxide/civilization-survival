@@ -1,0 +1,6 @@
+upd = false
+if upd == true then
+
+  else
+    no update
+end
