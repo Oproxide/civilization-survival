@@ -2,5 +2,5 @@ upd = false
 if upd == true then
 
   else
-    no update
+    print("no update")
 end
